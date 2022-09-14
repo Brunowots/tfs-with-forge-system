@@ -21,11 +21,11 @@
 
 #include "otpch.h"
 
-#include "config/configmanager.h"
-#include "game/game.h"
-#include "creatures/combat/spells.h"
-#include "lua/creature/events.h"
-#include "lua/callbacks/creaturecallback.h"
+#include "configmanager.h"
+#include "game.h"
+#include "spells.h"
+#include "events.h"
+#include "creaturecallback.h"
 
 extern Game g_game;
 extern Monsters g_monsters;
@@ -48,7 +48,7 @@ Monster* Monster::createMonster(const std::string& name)
 
 Monster::Monster(MonsterType* mType) :
 	Creature(),
-	strDescription(asLowerCaseString(mType->nameDescription)),
+	nameDescription(asLowerCaseString(mType->nameDescription)),
 	mType(mType)
 {
 	defaultOutfit = mType->info.outfit;
@@ -71,6 +71,46 @@ Monster::Monster(MonsterType* mType) :
 	}
 }
 
+void Monster::configureForgeSystem()
+{	
+	if (!canBeForgeMonster()) {	
+		return;
+	}
+
+	// avoid double forge
+	if (monsterForgeClassification == FORGESYSTEM_FIENDISH_MONSTER) {
+		// set stack
+		setForgeStack(15);
+		// set icon
+        setMonsterIcon(15, MONSTERICON_5); 
+        // update
+        g_game.updateCreatureIcon(this);
+	} else if (monsterForgeClassification == FORGESYSTEM_INFLUENCED_MONSTER) {
+		// set stack
+		uint16_t stack = normal_random(1, 5);
+		setForgeStack(stack);
+		// set icon
+        setMonsterIcon(stack, MONSTERICON_4); 
+        // update
+        g_game.updateCreatureIcon(this);
+	}
+
+	float percentToIncrement = static_cast<float>((forgeSystemStack * 6) + 100) / 100.f;
+	int32_t newHealth = static_cast<int32_t>(std::ceil(static_cast<float>(healthMax) * percentToIncrement));
+
+	healthMax = newHealth;
+	health = newHealth;
+
+	// evento para dar dust aos players
+    const std::string& Eventname = "ForgeSystemMonster";
+    registerCreatureEvent(Eventname);
+
+    //const Position& monsterPos = getPosition();	
+	//std::cout << "Name: " << getName() << ", Position(" << static_cast<uint16_t>(monsterPos.x) << ", " << static_cast<uint16_t>(monsterPos.y) << ", " << static_cast<uint16_t>(monsterPos.z) << "), " << std::endl;
+
+	g_game.sendUpdateCreature(this);
+}
+
 Monster::~Monster()
 {
 	clearTargetList();
@@ -85,6 +125,41 @@ void Monster::addList()
 void Monster::removeList()
 {
 	g_game.removeMonster(this);
+}
+
+const std::string& Monster::getName() const
+{
+	if (name.empty()) {
+		return mType->name;
+	}
+	return name;
+}
+
+void Monster::setName(const std::string& name)
+{
+	if (getName() == name) {
+		return;
+	}
+
+	this->name = name;
+
+	// NOTE: Due to how client caches known creatures,
+	// it is not feasible to send creature update to everyone that has ever met it
+	SpectatorVec spectators;
+	g_game.map.getSpectators(spectators, position, true, true);
+	for (Creature* spectator : spectators) {
+		if (Player* tmpPlayer = spectator->getPlayer()) {
+			tmpPlayer->sendUpdateTileCreature(this);
+		}
+	}
+}
+
+const std::string& Monster::getNameDescription() const
+{
+	if (nameDescription.empty()) {
+		return mType->nameDescription;
+	}
+	return nameDescription;
 }
 
 bool Monster::canSee(const Position& pos) const
@@ -106,7 +181,7 @@ bool Monster::canWalkOnFieldType(CombatType_t combatType) const
 	}
 }
 
-uint32_t Monster::getReflectValue(CombatType_t reflectType) const {
+uint32_t Monster::getReflectPercent(CombatType_t reflectType) const {
 	auto it = mType->info.reflectMap.find(reflectType);
 	if (it != mType->info.reflectMap.end()) {
 		return it->second;
@@ -357,9 +432,9 @@ void Monster::updateTargetList()
 		}
 	}
 
-	SpectatorHashSet spectators;
+	SpectatorVec spectators;
 	g_game.map.getSpectators(spectators, position, true);
-	spectators.erase(this);
+	fastVectorRemoveOne<Creature*>(spectators, this);
 	for (Creature* spectator : spectators) {
 		if (canSee(spectator->getPosition())) {
 			onCreatureFound(spectator);
@@ -680,7 +755,7 @@ bool Monster::isTarget(const Creature* creature) const
 
 bool Monster::selectTarget(Creature* creature)
 {
-	if (!isTarget(creature)) {
+	if (!isTarget(creature) || returnToMasterInterval > 0) {
 		return false;
 	}
 
@@ -830,6 +905,12 @@ void Monster::doAttacking(uint32_t interval)
 	bool updateLook = true;
 	bool resetTicks = interval != 0;
 	attackTicks += interval;
+  
+  float forgeSystemAtkBonus = 0;
+	if (monsterForgeClassification > FORGESYSTEM_NORMAL_MONSTER){
+		uint16_t damageBase = 3;
+		forgeSystemAtkBonus = static_cast<float>(damageBase + 100) / 100.f;
+	}
 
 	const Position& myPos = getPosition();
 	const Position& targetPos = attackedCreature->getPosition();
@@ -861,6 +942,13 @@ void Monster::doAttacking(uint32_t interval)
 
 				minCombatValue = spellBlock.minCombatValue * multiplier;
 				maxCombatValue = spellBlock.maxCombatValue * multiplier;
+        
+        if (maxCombatValue <= 0 && forgeSystemAtkBonus > 0)
+				{
+					minCombatValue *= forgeSystemAtkBonus;
+					maxCombatValue *= forgeSystemAtkBonus;
+				}
+        
 				spellBlock.spell->castSpell(this, attackedCreature);
 
 				if (spellBlock.isMelee) {
@@ -970,7 +1058,11 @@ void Monster::onThinkTarget(uint32_t interval)
 					}
 
 					if (mType->info.changeTargetChance >= uniform_random(1, 100)) {
-						searchTarget(TARGETSEARCH_DEFAULT);
+						if (mType->info.targetDistance <= 1) {
+							searchTarget(TARGETSEARCH_RANDOM);
+						} else {
+							searchTarget(TARGETSEARCH_NEAREST);
+						}
 					}
 				}
 			}
@@ -1144,7 +1236,7 @@ bool Monster::pushCreature(Creature* creature)
 	for (Direction dir : dirList) {
 		const Position& tryPos = Spells::getCasterPosition(creature, dir);
 		Tile* toTile = g_game.map.getTile(tryPos);
-		if (toTile && !toTile->hasFlag(TILESTATE_BLOCKPATH)) {
+		if (toTile && !toTile->hasFlag(TILESTATE_BLOCKPATH) && !toTile->getCreatures()) {
 			if (g_game.internalMoveCreature(creature, dir) == RETURNVALUE_NOERROR) {
 				return true;
 			}
@@ -1218,8 +1310,8 @@ bool Monster::getNextStep(Direction& nextDirection, uint32_t& flags)
 		}
 	}
 
-	if (result && (canPushItems() || canPushCreatures())) {
-		const Position& pos = Spells::getCasterPosition(this, direction);
+	if (result) {
+		const Position& pos = getNextPosition(nextDirection, getPosition());
 		Tile* posTile = g_game.map.getTile(pos);
 		if (posTile) {
 			if (canPushItems()) {
@@ -1858,6 +1950,9 @@ bool Monster::canWalkTo(Position pos, Direction moveDirection) const
 
 void Monster::death(Creature*)
 {
+  if (monsterForgeClassification > FORGESYSTEM_NORMAL_MONSTER) {
+		g_game.removeForgeMonster(getID(), monsterForgeClassification, true);
+	}
 	setAttackedCreature(nullptr);
 
 	for (Creature* summon : summons) {
@@ -1994,6 +2089,21 @@ void Monster::updateLookDirection()
 void Monster::dropLoot(Container* corpse, Creature*)
 {
 	if (corpse && lootDrop) {
+    uint16_t sliverID = 41944;
+
+		MonsterForgeClassifications_t classification = getMonsterForgeClassification();
+		// somente fiendish drop slivers 
+		if (classification == FORGESYSTEM_FIENDISH_MONSTER) {
+			uint16_t minSlivers = 3;
+			uint16_t maxSlivers = 7;
+
+			uint16_t sliverCount = uniform_random(minSlivers, maxSlivers);
+
+			Item* sliver = Item::CreateItem(sliverID, sliverCount);
+			if (g_game.internalAddItem(corpse, sliver) != RETURNVALUE_NOERROR) {
+				corpse->internalAddThing(sliver);
+			}
+		}
 		g_events->eventMonsterOnDropLoot(this, corpse);
 	}
 }
@@ -2035,7 +2145,9 @@ bool Monster::challengeCreature(Creature* creature)
 		targetChangeCooldown = 8000;
 		challengeFocusDuration = targetChangeCooldown;
 		targetChangeTicks = 0;
+		g_game.addToCheckFollow(this);
 	}
+
 	return result;
 }
 
@@ -2068,6 +2180,10 @@ void Monster::getPathSearchParams(const Creature* creature, FindPathParams& fpp)
 
 	if (isSummon()) {
 		if (getMaster() == creature) {
+			int32_t distX = Position::getDistanceX(getPosition(), creature->getPosition());
+			int32_t distY = Position::getDistanceY(getPosition(), creature->getPosition());
+			fpp.absoluteDist = true;
+			fpp.preferDiagonal = !((distX >= 2 && distY == 0) || (distY >= 2 && distX == 0));
 			fpp.maxTargetDist = 2;
 			fpp.fullPathSearch = true;
 		} else if (targetDistance <= 1) {
@@ -2087,3 +2203,27 @@ void Monster::getPathSearchParams(const Creature* creature, FindPathParams& fpp)
 		fpp.fullPathSearch = !canUseAttack(getPosition(), creature);
 	}
 }
+
+void Monster::clearFiendishStatus()
+{
+	timeToChangeFiendish = 0;
+	forgeMonster = false;
+	forgeSystemStack = 0;
+	monsterForgeClassification = FORGESYSTEM_NORMAL_MONSTER;
+
+	float multiplier = g_config.getFloat(ConfigManager::RATE_MONSTER_HEALTH);
+	health = mType->info.health*multiplier;
+	healthMax = mType->info.healthMax*multiplier;
+
+	// set icon
+    setMonsterIcon(0, CREATUREICON_NONE); 
+    g_game.updateCreatureIcon(this);
+
+	g_game.sendUpdateCreature(this);
+}
+
+void Monster::setMonsterIcon(uint16_t iconcount, uint16_t iconnumber)
+{
+	iconCount = iconcount;	
+	iconNumber = iconnumber;
+} 

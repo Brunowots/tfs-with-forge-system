@@ -27,4 +27,10 @@
 	<!-- Hireling Outfit Helper -->
 	<module type="recvbyte" byte="211" script="hirelings/hireling_module.lua" />
 
+  <!-- 1280 forge -->
+  <module type="recvbyte" byte="191" script="forge/forge_system.lua" /> 
+  <!-- fuse/transfer/convert -->
+  <module type="recvbyte" byte="192" script="forge/forge_system.lua" />
+  <!-- request forge ui from client button -->
+  
 </modules>

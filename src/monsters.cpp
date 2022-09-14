@@ -19,15 +19,15 @@
 
 #include "otpch.h"
 
-#include "creatures/monsters/monsters.h"
-#include "creatures/monsters/monster.h"
-#include "creatures/combat/spells.h"
-#include "creatures/combat/combat.h"
-#include "items/weapons/weapons.h"
-#include "config/configmanager.h"
-#include "game/game.h"
+#include "monsters.h"
+#include "monster.h"
+#include "spells.h"
+#include "combat.h"
+#include "weapons.h"
+#include "configmanager.h"
+#include "game.h"
 
-#include "utils/pugicast.h"
+#include "pugicast.h"
 
 extern Game g_game;
 extern Spells* g_spells;
@@ -864,8 +864,8 @@ MonsterType* Monsters::loadMonster(const std::string& file, const std::string& m
 				mType->info.isAttackable = attr.as_bool();
 			} else if (strcasecmp(attrName, "hostile") == 0) {
 				mType->info.isHostile = attr.as_bool();
-			} else if (strcasecmp(attrName, "familiar") == 0) {
-				mType->info.isFamiliar = attr.as_bool();
+			} else if (strcasecmp(attrName, "pet") == 0) {
+				mType->info.isPet = attr.as_bool();
 			} else if (strcasecmp(attrName, "illusionable") == 0) {
 				mType->info.isIllusionable = attr.as_bool();
 			} else if (strcasecmp(attrName, "convinceable") == 0) {
@@ -874,6 +874,8 @@ MonsterType* Monsters::loadMonster(const std::string& file, const std::string& m
 				mType->info.pushable = attr.as_bool();
 			} else if (strcasecmp(attrName, "canpushitems") == 0) {
 				mType->info.canPushItems = attr.as_bool();
+      } else if (strcasecmp(attrName, "notforgesystemcreature") == 0) {
+				mType->info.notForgeSystemCreature = attr.as_bool();
 			} else if (strcasecmp(attrName, "canpushcreatures") == 0) {
 				mType->info.canPushCreatures = attr.as_bool();
 			} else if (strcasecmp(attrName, "staticattack") == 0) {

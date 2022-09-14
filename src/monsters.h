@@ -17,11 +17,11 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#ifndef FS_MONSTERS_H_776E8327BCE2450EB7C4A260785E6C0D
-#define FS_MONSTERS_H_776E8327BCE2450EB7C4A260785E6C0D
+#ifndef FS_MONSTERS_H
+#define FS_MONSTERS_H
 
-#include "creatures/creature.h"
-#include "utils/enums.h"
+#include "creature.h"
+#include "enums.h"
 
 const uint32_t MAX_LOOTCHANCE = 100000;
 const uint32_t MAX_STATICWALK = 100;
@@ -146,11 +146,12 @@ class MonsterType
 		bool isHostile = true;
 		bool hiddenHealth = false;
 		bool isBlockable = false;
-		bool isFamiliar = false;
+		bool isPet = false;
 		bool isRewardBoss = false;
 		bool canWalkOnEnergy = true;
 		bool canWalkOnFire = true;
 		bool canWalkOnPoison = true;
+    bool notForgeSystemCreature = false;
 
 		MonstersEvent_t eventType = MONSTERS_EVENT_NONE;
 	};
@@ -257,4 +258,4 @@ class Monsters
 		bool loaded = false;
 };
 
-#endif
+#endif // FS_MONSTERS_H

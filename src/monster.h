@@ -17,12 +17,12 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#ifndef FS_MONSTER_H_9F5EEFE64314418CA7DA41D1B9409DD0
-#define FS_MONSTER_H_9F5EEFE64314418CA7DA41D1B9409DD0
+#ifndef FS_MONSTER_H
+#define FS_MONSTER_H
 
-#include "items/tile.h"
-#include "creatures/monsters/monsters.h"
-#include "utils/enums.h"
+#include "tile.h"
+#include "monsters.h"
+#include "enums.h"
 
 class Creature;
 class Game;
@@ -54,21 +54,23 @@ class Monster final : public Creature
 
 		void setID() override {
 			if (id == 0) {
-				id = monsterAutoID++;
+				id = monsterAutoID++; 
 			}
 		}
 
 		void removeList() override;
 		void addList() override;
 
-		const std::string& getName() const override {
-			return mType->name;
-		}
-		const std::string& getNameDescription() const override {
-			return mType->nameDescription;
-		}
+    const std::string& getName() const override;
+		void setName(const std::string& name);
+
+		const std::string& getNameDescription() const override;
+		void setNameDescription(const std::string& nameDescription) {
+			this->nameDescription = nameDescription;
+		};
+    
 		std::string getDescription(int32_t) const override {
-			return strDescription + '.';
+			return nameDescription + '.';
 		}
 
 		CreatureType_t getType() const override {
@@ -119,8 +121,8 @@ class Monster final : public Creature
 		bool isHostile() const {
 			return mType->info.isHostile;
 		}
-		bool isFamiliar() const {
-			return mType->info.isFamiliar;
+		bool isPet() const {
+			return mType->info.isPet;
 		}
 		bool canSee(const Position& pos) const override;
 		bool canSeeInvisibility() const override {
@@ -136,7 +138,7 @@ class Monster final : public Creature
 			this->spawn = newSpawn;
 		}
 
-		uint32_t getReflectValue(CombatType_t combatType) const;
+		uint32_t getReflectPercent(CombatType_t combatType) const override;
 		uint32_t getHealingCombatValue(CombatType_t healingType) const;
 
 		bool canWalkOnFieldType(CombatType_t combatType) const;
@@ -160,15 +162,65 @@ class Monster final : public Creature
 		bool changeTargetDistance(int32_t distance);
 
 		CreatureIcon_t getIcon() const override {
-			if (challengeMeleeDuration > 0 && mType->info.targetDistance > targetDistance)
+			if (challengeMeleeDuration > 0 && mType->info.targetDistance > targetDistance){
 				return CREATUREICON_TURNEDMELEE;
-			else if (varBuffs[BUFF_DAMAGERECEIVED] > 100)
+			}else if (varBuffs[BUFF_DAMAGERECEIVED] > 100){
 				return CREATUREICON_HIGHERRECEIVEDDAMAGE;
-			else if (varBuffs[BUFF_DAMAGEDEALT] < 100)
+			}else if (varBuffs[BUFF_DAMAGEDEALT] < 100){
 				return CREATUREICON_LOWERDEALTDAMAGE;
-			else
-				return CREATUREICON_NONE;
+			}
+      switch (iconNumber) {
+		 		case 1:
+		 			return CREATUREICON_HIGHERRECEIVEDDAMAGE;
+		 		case 2:
+		 			return CREATUREICON_LOWERDEALTDAMAGE;
+		 		case 3:
+		 			return CREATUREICON_TURNEDMELEE;
+		 		case 4:
+		 			return MONSTERICON_4;
+		 		case 5:
+		 			return MONSTERICON_5;
+		 		case 6:
+		 			return MONSTERICON_6;
+		 		case 7:
+		 			return MONSTERICON_7;
+		 		case 8:
+		 			return MONSTERICON_8;
+		 		case 9:
+		 			return MONSTERICON_9;
+		 		case 10:
+		 			return MONSTERICON_10;
+		 		case 11:
+		 			return MONSTERICON_11;
+		 		case 12:
+		 			return MONSTERICON_12;
+		 		case 13:
+		 			return MONSTERICON_13;
+		 		case 14:
+		 			return MONSTERICON_14;
+		 		case 15:
+		 			return MONSTERICON_15;
+		 		case 16:
+		 			return MONSTERICON_16;
+		 		case 17:
+		 			return MONSTERICON_17;
+		 		case 18:
+		 			return MONSTERICON_18;
+		 		case 19:
+		 			return MONSTERICON_19;
+		 		case 20:
+		 			return MONSTERICON_20;
+		 		case 21:
+		 			return MONSTERICON_21;
+		 		default:
+		 			return CREATUREICON_NONE;
+		 	}
+
+			return CREATUREICON_NONE;	
 		}
+    
+    void setMonsterIcon(uint16_t iconcount, uint16_t iconnumber);
+    
 
 		void setNormalCreatureLight() override;
 		bool getCombatValues(int32_t& min, int32_t& max) override;
@@ -209,17 +261,70 @@ class Monster final : public Creature
 		bool getIgnoreFieldDamage() const {
 			return ignoreFieldDamage;
 		}
+    
+    uint16_t getRaceId() const {
+			return mType->info.raceid;
+		}
 
 		BlockType_t blockHit(Creature* attacker, CombatType_t combatType, int32_t& damage,
 							 bool checkDefense = false, bool checkArmor = false, bool field = false) override;
 
 		static uint32_t monsterAutoID;
+    
+    void configureForgeSystem();
+
+		bool canBeForgeMonster() {
+			return getForgeStack() == 0 && !isSummon() && !mType->info.notForgeSystemCreature; 
+		}	
+
+		void setForgeMonster(bool forge)
+		{
+			forgeMonster = forge;
+		}
+
+		uint32_t getForgeStack() const{
+			return forgeSystemStack;
+		}
+
+		void setForgeStack(uint16_t stack){
+			forgeSystemStack = stack;
+		}
+
+		MonsterForgeClassifications_t getMonsterForgeClassification() {
+			return monsterForgeClassification;
+		}
+
+		void setMonsterForgeClassification(MonsterForgeClassifications_t classification)
+		{
+			monsterForgeClassification = classification;
+		}
+
+		void setTimeToChangeFiendish(time_t time){
+			timeToChangeFiendish = time;
+		}
+
+		time_t getTimeToChangeFiendish() const 
+		{
+			return timeToChangeFiendish;
+		}
+
+		void clearFiendishStatus();
 
 	private:
 		CreatureHashSet friendList;
 		CreatureList targetList;
+    
+    uint16_t iconCount = 0;
+		uint32_t iconNumber = 0;
 
-		std::string strDescription;
+		time_t timeToChangeFiendish = 0;
+		bool forgeMonster = false;
+		//forge system
+		uint16_t forgeSystemStack = 0;
+		MonsterForgeClassifications_t monsterForgeClassification = FORGESYSTEM_NORMAL_MONSTER;
+
+		std::string name;
+		std::string nameDescription;
 
 		MonsterType* mType;
 		Spawn* spawn = nullptr;
@@ -318,4 +423,4 @@ class Monster final : public Creature
 		friend class Map;
 };
 
-#endif
+#endif // FS_MONSTER_H

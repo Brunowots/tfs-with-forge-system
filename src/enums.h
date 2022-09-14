@@ -17,8 +17,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#ifndef FS_ENUMS_H_003445999FEE4A67BCECBE918B0124CE
-#define FS_ENUMS_H_003445999FEE4A67BCECBE918B0124CE
+#ifndef FS_ENUMS_H
+#define FS_ENUMS_H
 
 #include <list>
 
@@ -92,12 +92,17 @@ enum itemAttrTypes : uint32_t {
 	ITEM_ATTRIBUTE_FLUIDTYPE = 1 << 21,
 	ITEM_ATTRIBUTE_DOORID = 1 << 22,
 	ITEM_ATTRIBUTE_SPECIAL = 1 << 23,
-	ITEM_ATTRIBUTE_IMBUEMENT_SLOT = 1 << 24,
+	ITEM_ATTRIBUTE_IMBUINGSLOTS = 1 << 24,
 	ITEM_ATTRIBUTE_OPENCONTAINER = 1 << 25,
 	ITEM_ATTRIBUTE_QUICKLOOTCONTAINER = 1 << 26,
 	ITEM_ATTRIBUTE_DURATION_TIMESTAMP = 1 << 27,
-	ITEM_ATTRIBUTE_IMBUEMENT_TYPE = 1 << 28,
-	ITEM_ATTRIBUTE_CUSTOM = 1U << 31
+  ITEM_ATTRIBUTE_TIER = 1U << 30,	
+	ITEM_ATTRIBUTE_CUSTOM = 1U << 31,
+};
+
+enum ItemDecayType_t : uint8_t {
+	DECAY_TYPE_NORMAL = 0,
+	DECAY_TYPE_TIMESTAMP = 1,
 };
 
 enum VipStatus_t : uint8_t {
@@ -113,8 +118,11 @@ enum MarketAction_t {
 };
 
 enum MarketRequest_t {
-	MARKETREQUEST_OWN_OFFERS = 0xFFFE,
-	MARKETREQUEST_OWN_HISTORY = 0xFFFF,
+	MARKETREQUEST_OWN_OFFERS_OLD = 0xFFFE,
+	MARKETREQUEST_OWN_HISTORY_OLD = 0xFFFF,
+	MARKETREQUEST_OWN_HISTORY = 1,
+	MARKETREQUEST_OWN_OFFERS = 2,
+	MARKETREQUEST_ITEM = 3,
 };
 
 enum MarketOfferState_t {
@@ -137,7 +145,8 @@ enum CreatureType_t : uint8_t {
 	CREATURETYPE_PLAYER = 0,
 	CREATURETYPE_MONSTER = 1,
 	CREATURETYPE_NPC = 2,
-	CREATURETYPE_SUMMON_PLAYER = 3,
+	CREATURETYPE_SUMMONPLAYER = 3,
+	CREATURETYPE_SUMMON_OWN = 3,
 	CREATURETYPE_SUMMON_OTHERS = 4,
 	CREATURETYPE_HIDDEN = 5,
 };
@@ -157,33 +166,9 @@ enum OperatingSystem_t : uint8_t {
 	CLIENTOS_OTCLIENT_MAC = 12,
 };
 
-// New Prey
-enum PreySlotNum_t : uint8_t
-{
-	PREY_SLOTNUM_FIRST = 0,
-	PREY_SLOTNUM_SECOND = 1,
-	PREY_SLOTNUM_THIRD = 2,
-};
-
-enum PreyState_t : uint8_t
-{
-	PREY_STATE_LOCKED = 0,
-	PREY_STATE_INACTIVE = 1,
-	PREY_STATE_ACTIVE = 2,
-	PREY_STATE_SELECTION = 3,
-	PREY_STATE_SELECTION_CHANGE_MONSTER = 4,
-};
-
-enum PreyBonusType_t : uint8_t
-{
-	PREY_BONUS_DAMAGE_BOOST = 0,
-	PREY_BONUS_DAMAGE_REDUCTION = 1,
-	PREY_BONUS_XP_BONUS = 2,
-	PREY_BONUS_IMPROVED_LOOT = 3,
-	PREY_BONUS_NONE = 4,
-
-	PREY_BONUS_FIRST = PREY_BONUS_DAMAGE_BOOST,
-	PREY_BONUS_LAST = PREY_BONUS_IMPROVED_LOOT,
+enum PartyAnalyzer_t : uint8_t {
+	MARKET_PRICE = 0,
+	NPC_PRICE = 1
 };
 
 enum SpellGroup_t : uint8_t {
@@ -376,7 +361,8 @@ enum BlockType_t : uint8_t {
 	BLOCK_NONE,
 	BLOCK_DEFENSE,
 	BLOCK_ARMOR,
-	BLOCK_IMMUNITY
+	BLOCK_IMMUNITY,
+  BLOCK_DODGE
 };
 
 enum skills_t : uint8_t {
@@ -394,11 +380,15 @@ enum skills_t : uint8_t {
 	SKILL_MANA_LEECH_CHANCE = 11,
 	SKILL_MANA_LEECH_AMOUNT = 12,
 
-	SKILL_MAGLEVEL = 13,
-	SKILL_LEVEL = 14,
+	SPECIALSKILL_ONSLAUGHT = 13,
+	SPECIALSKILL_RUSE = 14,
+	SPECIALSKILL_MOMENTUM = 15,
+
+	SKILL_MAGLEVEL = 16,
+	SKILL_LEVEL = 17,
 
 	SKILL_FIRST = SKILL_FIST,
-	SKILL_LAST = SKILL_MANA_LEECH_AMOUNT
+	SKILL_LAST = SPECIALSKILL_MOMENTUM
 };
 
 enum stats_t {
@@ -459,6 +449,12 @@ enum ConditionType_t {
 	CONDITION_SPELLCOOLDOWN = 1 << 26,
 	CONDITION_SPELLGROUPCOOLDOWN = 1 << 27,
 	CONDITION_ROOTED = 1 << 28,
+	CONDITION_FEARED = 1 << 29,
+	CONDITION_GOSHNAR1 = 1 << 30,
+	CONDITION_GOSHNAR2 = 1 << 31,
+	CONDITION_GOSHNAR3 = static_cast<uint64_t>(1) << 32,
+	CONDITION_GOSHNAR4 = static_cast<uint64_t>(1) << 33,
+	CONDITION_GOSHNAR5 = static_cast<uint64_t>(1) << 34,
 };
 
 enum ConditionId_t : int8_t {
@@ -690,6 +686,24 @@ struct Outfit_t {
 	uint16_t lookFamiliarsType = 0;
 };
 
+struct PartyAnalyzer {
+	PartyAnalyzer(uint32_t playerId, std::string playerName) :
+                id(playerId),
+                name(std::move(playerName)) {}
+
+	uint32_t id;
+
+	std::string name;
+
+	uint64_t damage = 0;
+	uint64_t healing = 0;
+	uint64_t lootPrice = 0;
+	uint64_t supplyPrice = 0;
+
+	std::map<uint16_t, uint32_t> lootMap; // [itemID] = amount
+	std::map<uint16_t, uint32_t> supplyMap; // [itemID] = amount
+};
+
 enum Faction_t {
 	FACTION_DEFAULT = 0,
 	FACTION_PLAYER = 1,
@@ -735,12 +749,24 @@ struct ShopInfo {
 		: itemId(newItemId), subType(newSubType), buyPrice(newBuyPrice), sellPrice(newSellPrice), realName(std::move(newRealName)) {}
 };
 
+// hash for grouping itemType count by tier
+struct ItemTypeTierHash {
+	std::size_t operator()(const std::pair<uint16_t, uint8_t>& s) const noexcept
+	{
+		uint32_t i = static_cast<uint32_t>(s.first) << 8 | s.second;
+		return std::hash<uint32_t>{}(i);
+	}
+};
+typedef std::unordered_map<std::pair<uint16_t, uint8_t>, uint32_t, ItemTypeTierHash> TieredItemsCountMap;
+
+
 struct MarketOffer {
 	uint32_t price;
 	uint32_t timestamp;
 	uint16_t amount;
 	uint16_t counter;
 	uint16_t itemId;
+  uint8_t tier;
 	std::string playerName;
 };
 
@@ -748,17 +774,18 @@ struct MarketOfferEx {
 	MarketOfferEx() = default;
 	MarketOfferEx(MarketOfferEx&& other) :
 		id(other.id), playerId(other.playerId), timestamp(other.timestamp), price(other.price),
-		amount(other.amount), counter(other.counter), itemId(other.itemId), type(other.type),
+		amount(other.amount), counter(other.counter), itemId(other.itemId), type(other.type), tier(other.tier),
 		playerName(std::move(other.playerName)) {}
 
 	uint32_t id;
 	uint32_t playerId;
 	uint32_t timestamp;
-	uint32_t price;
+	uint64_t price;
 	uint16_t amount;
 	uint16_t counter;
 	uint16_t itemId;
 	MarketAction_t type;
+  uint8_t tier;
 	std::string playerName;
 };
 
@@ -767,6 +794,7 @@ struct HistoryMarketOffer {
 	uint32_t price;
 	uint16_t itemId;
 	uint16_t amount;
+  uint8_t tier;
 	MarketOfferState_t state;
 };
 
@@ -816,7 +844,9 @@ struct CombatDamage
 	bool critical;
 	int affected;
 	bool extension;
+	bool cleave;
 	std::string exString;
+  bool fatal;
 
 	CombatDamage()
 	{
@@ -825,8 +855,10 @@ struct CombatDamage
 		primary.value = secondary.value = 0;
 		critical = false;
 		affected = 1;
+		cleave = false;
 		extension = false;
 		exString = "";
+    fatal = false;
 	}
 };
 
@@ -870,11 +902,30 @@ enum Daily_Reward_Status : uint8_t {
 	DAILY_REWARD_NOTAVAILABLE = 2
 };
 
-enum Resource_t : uint8_t
+enum MonsterForgeClassifications_t : uint16_t
 {
-	RESOURCE_BANK = 0x00,
-	RESOURCE_INVENTORY = 0x01,
-	RESOURCE_PREY = 0x0A,
+	FORGESYSTEM_NORMAL_MONSTER = 0,
+	FORGESYSTEM_INFLUENCED_MONSTER = 1,
+	FORGESYSTEM_FIENDISH_MONSTER = 2,
+};
+
+enum ResourceTypes_t : uint8_t 
+{
+  RESOURCETYPE_BANK_GOLD = 0x00,
+  RESOURCETYPE_INVENTORY_GOLD = 0x01,
+  RESOURCETYPE_PREY_BONUS_REROLLS = 0x0A, 
+  RESOURCE_TASK_HUNTING = 0x32,
+  RESOURCE_DAILYREWARD_STREAK = 0x14,
+	RESOURCE_DAILYREWARD_JOKERS = 0x15,
+	RESOURCE_CHARM_POINTS = 0x1E, // u32
+
+	//u64
+	RESOURCE_TOURNAMENT_COINS = 0x28,
+	RESOURCE_FORGE_DUST = 0x46,
+	RESOURCE_FORGE_SLIVERS = 0x47,
+	RESOURCE_FORGE_CORES = 0x48,
+
+    RESOURCETYPE_ALL = 255, // Just used internally
 };
 
 enum MagicEffectsType_t : uint8_t {
@@ -1068,35 +1119,35 @@ enum Webhook_Colors_t : uint32_t {
 	WEBHOOK_COLOR_RAID = 0x0000FF
 };
 
-enum ImbuementTypes_t : int64_t {
-	IMBUEMENT_NONE = -1,
-	IMBUEMENT_ELEMENTAL_DAMAGE = 0,
-	IMBUEMENT_LIFE_LEECH = 1,
-	IMBUEMENT_MANA_LEECH = 2,
-	IMBUEMENT_CRITICAL_HIT = 3,
-	IMBUEMENT_ELEMENTAL_PROTECTION_DEATH = 4,
-	IMBUEMENT_ELEMENTAL_PROTECTION_EARTH = 5,
-	IMBUEMENT_ELEMENTAL_PROTECTION_FIRE = 6,
-	IMBUEMENT_ELEMENTAL_PROTECTION_ICE = 7,
-	IMBUEMENT_ELEMENTAL_PROTECTION_ENERGY = 8,
-	IMBUEMENT_ELEMENTAL_PROTECTION_HOLY = 9,
-	IMBUEMENT_INCREASE_SPEED = 10,
-	IMBUEMENT_SKILLBOOST_AXE = 11,
-	IMBUEMENT_SKILLBOOST_SWORD = 12,
-	IMBUEMENT_SKILLBOOST_CLUB = 13,
-	IMBUEMENT_SKILLBOOST_SHIELDING = 14,
-	IMBUEMENT_SKILLBOOST_DISTANCE = 15,
-	IMBUEMENT_SKILLBOOST_MAGIC_LEVEL = 16,
-	IMBUEMENT_INCREASE_CAPACITY = 17
-};
-
 enum SessionEndInformations : uint8_t {
 	// I'm guessing unknown types are ban/protocol error or something
 	// but since there aren't any difference from logout should we care?
-	SESSION_END_LOGOUT, // work only with standard logout
+	SESSION_END_LOGOUT,  // work only with standard logout
 	SESSION_END_UNK2,
 	SESSION_END_FORCECLOSE,
 	SESSION_END_LOGOUT2, // work with standard logout and offline training logout
+};
+
+enum Blessings_t : uint8_t {
+	TWIST_OF_FATE = 1,
+	WISDOM_OF_SOLITUDE = 2,
+	SPARK_OF_THE_PHOENIX = 3,
+	FIRE_OF_THE_SUNS = 4,
+	SPIRITUAL_SHIELDING = 5,
+	EMBRACE_OF_TIBIA = 6,
+	BLOOD_OF_THE_MOUNTAIN = 7,
+	HEARTH_OF_THE_MOUNTAIN = 8,
+};
+
+const std::unordered_map<Blessings_t, std::string> BlessingNames = {
+	{TWIST_OF_FATE, "Twist of Fate"},
+	{WISDOM_OF_SOLITUDE, "The Wisdom of Solitude"},
+	{SPARK_OF_THE_PHOENIX, "The Spark of the Phoenix"},
+	{FIRE_OF_THE_SUNS, "The Fire of the Suns"},
+	{SPIRITUAL_SHIELDING, "The Spiritual Shielding"},
+	{EMBRACE_OF_TIBIA, "The Embrace of Tibia"},
+	{BLOOD_OF_THE_MOUNTAIN, "Blood of the Mountain"},
+	{HEARTH_OF_THE_MOUNTAIN, "Heart of the Mountain"},
 };
 
 /**
@@ -1129,4 +1180,4 @@ class TeamFinder
 	std::map<uint32_t, uint8_t> membersMap = {}; // list: player:getGuid(), player status
 };
 
-#endif
+#endif // FS_ENUMS_H
