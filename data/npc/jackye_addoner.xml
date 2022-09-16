@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Jackye Addoner" walkinterval="2000" floorchange="0" script="jackye_addoner.lua">
+	<health now="100" max="100"/>
+	<look type="54"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|, looking for {addons}?"/> 
+		<parameter key="message_farewell" value="Bye."/>
+	</parameters>
+</npc>

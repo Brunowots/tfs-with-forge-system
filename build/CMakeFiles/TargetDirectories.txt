@@ -1,0 +1,5 @@
+/home/otserv-global/build/CMakeFiles/rebuild_cache.dir
+/home/otserv-global/build/CMakeFiles/edit_cache.dir
+/home/otserv-global/build/src/CMakeFiles/rebuild_cache.dir
+/home/otserv-global/build/src/CMakeFiles/edit_cache.dir
+/home/otserv-global/build/src/CMakeFiles/tfs.dir

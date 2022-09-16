@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Seller Addon" walkinterval="2000" floorchange="0" script="compra_tudo.lua">
+	<health now="100" max="100"/>
+	<look type="279" head="144" body="114" legs="114" feet="115" addons="3"/>
+	<parameters>
+		<parameter key="message_greet" value="Olá |PLAYERNAME|. Vendo alguns itens pra customizar sua roupa. Qual tem interesse?"/>
+		<parameter key="message_farewell" value="Bye."/>
+		<parameter key="module_keywords" value="1"/>
+		<parameter key="keywords" value="job;"/>
+		<parameter key="keyword_reply1" value=":D"/>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="
+			Ankh,2193,30000;
+			Ape Fur,5883,30000;
+			Banana Staff,3966,30000;
+			Bat Wing,5894,30000;
+			Bear Paw,5896,30000;
+			Behemoth Claw,5930,30000;
+			Blue Piece of Cloth,5912,30000;
+			Bonelord Eye,5898,30000;
+			Brown Piece of Cloth,5913,30000;
+			Brutus Bloodbeard's Hat,6099,30000;
+			Ceiron's Waterskin cheio de Pure Water,5939,30000;
+			Chicken Feather,5890,30000;
+			Colourful Feathers,27757,30000;
+			Coral Comb,5945,30000;
+			Crown Legs,2488,30000;
+			Deadeye Devious' Eye Patch,6102,30000;
+			Demon Dust,5906,30000;
+			Demonic Essence,6500,3000;
+			Dubious Piece of Cloth,13541,30000;
+			Enchanted Chicken Wings,5891,30000;
+			Engraved Crossbow,5947,30000;
+			Eye Patch,6098,30000;
+			Fish Fin,5895,30000;
+			Flask of Warrior's Sweat,5885,30000;
+			Gnomish Voucher Type CA1,18521,30000;
+			Gnomish Voucher Type CA2,18522,30000;
+			Gnomish Voucher Type CB,18520,30000;
+			Gnomish Voucher Type MA1,18518,30000;
+			Gnomish Voucher Type MA2,18519,30000;
+			Gnomish Voucher Type MB,18517,30000;
+			Green Piece of Cloth,5910,30000;
+			Griffinclaw Container,5937,30000;
+			Hailstorm Rod,2183,30000;
+			Hardened Bone,5925,30000;
+			Heaven Blossom,2743,30000;
+			Helmet of the Deep,5461,30000;
+			Holy Orchid,5922,30000;
+			Honeycomb,5902,30000;
+			Hook,6097,30000;
+			Huge Chunk of Crude Iron,5892,30000;
+			Iron Ore,5880,30000;
+			Jaul's Pearl,15434,30000;
+			Legion Helmet,2480,30000;
+			Lizard Leather,5876,30000;
+			Lizard Scale,5881,30000;
+			Ludicrous Piece of Cloth,13544,30000;
+			Luminous Piece of Cloth,13545,30000;
+			Magic Sulphur,5904,30000;
+			Mandrake,5015,30000;
+			Medusa Shield,2536,30000;
+			Mermaid Comb,5945,30000;
+			Minotaur Leather,5878,30000;
+			Moonlight Rod,2186,30000;
+			Music Sheet (First),6087,30000;
+			Music Sheet (Fourth),6090,30000;
+			Music Sheet (Second),6088,30000;
+			Music Sheet (Third),6089,30000;
+			Necrotic Rod,2185,30000;
+			Obujos' Shell,15436,30000;
+			Obvious Piece of Cloth,13543,30000;
+			Ominous Piece of Cloth,13540,30000;
+			Peg Leg,6126,30000;
+			Perfect Behemoth Fang,5893,30000;
+			Piece of Draconian Steel,5889,30000;
+			Piece of Hell Steel,5888,30000;
+			Piece of Royal Steel,5887,30000;
+			Plague Bell,13926,30000;
+			Plague Mask,13925,30000;
+			Porcelain Mask,27756,30000;
+			damaged steel helmet,11422,30000;
+			Red Dragon Leather,5948,30000;
+			Red Dragon Scale,5882,30000;
+			Red Piece of Cloth,5911,30000;
+			Ring of the Sky,2123,30000;
+			Ron the Ripper's Sabre,6101,30000;
+			Shard,36189,30000;
+			Slime Mould,13758,30000;
+			Snakebite Rod,2182,30000;
+			Sniper Gloves,5875,30000;
+			Spider Silk,24188,30000;
+			Spirit Container,5884,40000;
+			Spool of Yarn,5886,30000;
+			Staff,6107,30000;
+			Sturdy Book,32492,30000;
+			Tanjis' Sight,15435,30000;
+			Terra Rod,2181,30000;
+			The Lethal Lissy's Shirt,6100,30000;
+			Tribal Mask,3967,30000;
+			Turtle Shell,5899,30000;
+			Vampire Dust,5905,30000;
+			Voluminous Piece of Cloth,13542,30000;
+			Voodoo Doll,3955,30000;
+			Wand of Cosmic Energy,2189,30000;
+			Wand of Decay,2188,30000;
+			Wand of Dragonbreath,2191,30000;
+			Wand of Inferno,2187,30000;
+			Wand of Vortex,2190,30000;
+			White Piece of Cloth,5909,30000;
+			Winning Lottery Ticket,5958,30000;
+			Wolf Paw,5897,30000;
+			Wolf tooth chain,5940,30000;
+			Yellow Piece of Cloth,5914,30000;"/>
+	</parameters>
+</npc>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="The Renegade Of Umera" walkinterval="500" floorchange="0" script="the_renegade_of_umera.lua">
+	<health now="100" max="100"/>
+	<look type="137" head="40" body="96" legs="95" feet="96" addons="0"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="
+      rope belt, 12448, 1000;
+      silencer claws, 22534, 7000;
+      some grimeleech wings, 25386, 15000;
+      wereboar hooves, 24709, 5000;
+      crystallized anger, 26163, 4000;
+      vampire teeth, 10602, 6000;
+      bloody pincers, 10550, 3000;
+      piece of dead brain, 10580, 10000;
+      damselfly wing, 19738, 3000;
+      compass, 11219, 1000;
+      waspoid wing, 15484, 2500;
+      protective charm, 12400, 1000;
+      sabretooth, 11228, 3000;
+      vexclaw talon, 25384, 20000;
+      fairy wings, 28999, 500;
+      little bowl of myrrh, 29007, 1000;
+      goosebump leather, 22539, 10000;
+      piece of swampling wood, 20103, 2000;
+      snake skin, 10611, 4000;
+      brimstone fangs, 12658, 3000;
+      winter wolf fur, 11212, 3000;
+      deepling warts, 15425, 5000;
+      flask of embalming fluid, 12422, 2000;
+      gloom wolf fur, 24663, 3000;
+      mystical hourglass, 10577, 7000;
+      green dragon leather, 5877, 3000;
+      blazing bone, 18425, 7000;
+      draken sulphur, 12614, 4000;
+      cultish robe, 10556, 2000;
+      cultish mask, 10555, 5000;
+      hellspawn tail, 11221, 7000;
+      wyvern talisman, 10561, 5000;
+      crawler head plating, 15482, 2500;
+      wyrm scale, 10582, 1500;
+      swamp grass, 10603, 3000;
+      poisonous slime, 10557, 4000;
+      slime heart, 23565, 2500;
+      fiery heart, 10553, 3000;
+      green dragon scale, 5920, 5000;
+      demon horn, 5954, 7000;
+      pile of grave earth, 12440, 2500;
+      demonic skeletal hand, 3000;
+      petrified scream, 10564, 7000;
+      frosty heart, 10578, 10000;
+      seacrest hair, 24170, 5000;
+      polar bear paw, 10567, 5000;
+      rorc feather, 10568, 6000;
+      peacock feather fan, 24631, 7000;
+      energy vein, 26164, 3000;
+      lion's mane, 10608, 2000;
+      mooh'tah shell, 23573, 6000;
+      war crystal, 10571, 30000;
+      elven scouting glass, 12420, 1000;
+      elven hoof, 21311, 2000;
+      metal spike, 11215, 5000;
+      elvish talisman, 10552, 1000;
+      broken shamanic staff, 12408, 3000;
+      strand of medusa hair, 11226, 5500;
+      orc tooth, 11113, 2500;
+      battle stone, 12403, 5000;
+      moohtant horn, 23571, 6000;
+      piece of scarab shell, 10558, 1500;
+      brimstone shell, 12659, 3300;
+      frazzle skin,, 4000;
+      cyclops toe, 10574, 2000;
+      ogre nose ring, 24845, 2000;
+      warmaster's wristguards, 11322, 5000;"/>
+		<parameter key="shop_sellable" value="spear, 2389, 3;"/>
+	</parameters>
+</npc>

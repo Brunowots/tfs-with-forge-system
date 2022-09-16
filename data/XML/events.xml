@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+	<event name="Double Skills" startdate="04/12/2022" enddate="04/15/2022" >
+		<ingame exprate="100" lootrate="100" spawnrate="100" skillrate="200" />
+		<description description="Evento de Double Skills" />
+		<colors colordark="#735D10" colorlight="#8B6D05" />
+		<details displaypriority="6" isseasonal="1" specialevent="0" />
+	</event>
+	<event name="Double Loot" startdate="27/03/2022" enddate="28/03/2022" >
+		<ingame exprate="100" lootrate="200" spawnrate="100" skillrate="100" />
+		<description description="Evento de Double Loot" />
+		<colors colordark="#735D10" colorlight="#8B6D05" />
+		<details displaypriority="6" isseasonal="0" specialevent="0" />
+	</event>
+</events>

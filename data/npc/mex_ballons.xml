@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Mex Ballons" walkinterval="2000" floorchange="0" script="mex_ballons.lua">
+	<health now="100" max="100"/>
+	<look type="130" body="116" legs="90" feet="95" addons="3"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="
+			pink ballon, 42331, 20000;
+            purple ballon, 42332, 20000;
+			red ballon, 42333, 20000;
+			teal ballon, 42334, 20000;
+			yellow ballon, 42335, 20000;
+            colourful balloons, 42336, 20000;
+            bonelord balloons, 42337, 20000;
+			cyclops balloons, 42338, 30000;
+			cyclops head balloons, 42339, 40000;
+			dwarf balloons, 42340, 20000;
+			hydra balloons, 42341, 30000;
+			tibianus balloons, 42344, 30000;
+			elioise balloons, 42345, 30000;
+			rotworm balloons, 42346, 30000;
+			rotworm head balloons, 42347, 30000;
+			yellow 25 years balloon, 42348, 30000;
+			red 25 years balloon, 42349, 30000;
+			teal 25 years balloon, 42350, 30000;
+			green 25 years balloon, 42351, 30000;
+			orange 25 years balloon, 42352, 30000;
+			pink 25 years balloon, 42353, 10000;"/>
+		<parameter key="shop_sellable" value=""/>
+	</parameters>
+</npc>

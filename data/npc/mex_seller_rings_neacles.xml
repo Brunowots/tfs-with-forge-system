@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Mex Seller Rings Neacles" walkinterval="2000" floorchange="0" script="mexring.lua">
+	<health now="100" max="100"/>
+	<look type="130" body="114" legs="89" feet="89" addons="3"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="
+            collar of blue plasma, 26198, 25000;
+            collar of Red Plasma, 26200, 25000;
+            koshei's ancient amulet, 8266, 100000;
+			collar of Green Plasma, 26199, 25000;
+			club ring, 2209, 2000;
+			dwarven ring, 2213, 3000;
+			energy ring, 2167, 2000;
+			life ring, 2168, 4000;
+			prismatic ring, 18408, 55000;
+			ring of blue plasma, 26186, 25000;
+			ring of green plasma, 26187, 25000;
+			ring of red plasma, 26190, 25000;
+			stealth ring, 2165, 8000;
+			sword ring, 2207, 2000;
+			axe ring, 2208, 2000;
+			time ring, 2169, 10000;"/>
+		<parameter key="shop_sellable" value=""/>
+	</parameters>
+</npc>

@@ -1,0 +1,442 @@
+[
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/configmanager.cpp.o -c /home/otserv-global/src/configmanager.cpp",
+  "file": "/home/otserv-global/src/configmanager.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/mounts.cpp.o -c /home/otserv-global/src/mounts.cpp",
+  "file": "/home/otserv-global/src/mounts.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/outfit.cpp.o -c /home/otserv-global/src/outfit.cpp",
+  "file": "/home/otserv-global/src/outfit.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/combat.cpp.o -c /home/otserv-global/src/combat.cpp",
+  "file": "/home/otserv-global/src/combat.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/condition.cpp.o -c /home/otserv-global/src/condition.cpp",
+  "file": "/home/otserv-global/src/condition.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/spells.cpp.o -c /home/otserv-global/src/spells.cpp",
+  "file": "/home/otserv-global/src/spells.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/creature.cpp.o -c /home/otserv-global/src/creature.cpp",
+  "file": "/home/otserv-global/src/creature.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/chat.cpp.o -c /home/otserv-global/src/chat.cpp",
+  "file": "/home/otserv-global/src/chat.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/monster.cpp.o -c /home/otserv-global/src/monster.cpp",
+  "file": "/home/otserv-global/src/monster.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/monsters.cpp.o -c /home/otserv-global/src/monsters.cpp",
+  "file": "/home/otserv-global/src/monsters.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/npc.cpp.o -c /home/otserv-global/src/npc.cpp",
+  "file": "/home/otserv-global/src/npc.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/account.cpp.o -c /home/otserv-global/src/account.cpp",
+  "file": "/home/otserv-global/src/account.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/familiars.cpp.o -c /home/otserv-global/src/familiars.cpp",
+  "file": "/home/otserv-global/src/familiars.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/groups.cpp.o -c /home/otserv-global/src/groups.cpp",
+  "file": "/home/otserv-global/src/groups.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/guild.cpp.o -c /home/otserv-global/src/guild.cpp",
+  "file": "/home/otserv-global/src/guild.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/party.cpp.o -c /home/otserv-global/src/party.cpp",
+  "file": "/home/otserv-global/src/party.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/imbuements.cpp.o -c /home/otserv-global/src/imbuements.cpp",
+  "file": "/home/otserv-global/src/imbuements.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/ban.cpp.o -c /home/otserv-global/src/ban.cpp",
+  "file": "/home/otserv-global/src/ban.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/waitlist.cpp.o -c /home/otserv-global/src/waitlist.cpp",
+  "file": "/home/otserv-global/src/waitlist.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/player.cpp.o -c /home/otserv-global/src/player.cpp",
+  "file": "/home/otserv-global/src/player.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/vocation.cpp.o -c /home/otserv-global/src/vocation.cpp",
+  "file": "/home/otserv-global/src/vocation.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/spawn.cpp.o -c /home/otserv-global/src/spawn.cpp",
+  "file": "/home/otserv-global/src/spawn.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/database.cpp.o -c /home/otserv-global/src/database.cpp",
+  "file": "/home/otserv-global/src/database.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/databasemanager.cpp.o -c /home/otserv-global/src/databasemanager.cpp",
+  "file": "/home/otserv-global/src/databasemanager.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/databasetasks.cpp.o -c /home/otserv-global/src/databasetasks.cpp",
+  "file": "/home/otserv-global/src/databasetasks.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/game.cpp.o -c /home/otserv-global/src/game.cpp",
+  "file": "/home/otserv-global/src/game.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/gamestore.cpp.o -c /home/otserv-global/src/gamestore.cpp",
+  "file": "/home/otserv-global/src/gamestore.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/position.cpp.o -c /home/otserv-global/src/position.cpp",
+  "file": "/home/otserv-global/src/position.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/teleport.cpp.o -c /home/otserv-global/src/teleport.cpp",
+  "file": "/home/otserv-global/src/teleport.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/scheduler.cpp.o -c /home/otserv-global/src/scheduler.cpp",
+  "file": "/home/otserv-global/src/scheduler.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/tasks.cpp.o -c /home/otserv-global/src/tasks.cpp",
+  "file": "/home/otserv-global/src/tasks.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/fileloader.cpp.o -c /home/otserv-global/src/fileloader.cpp",
+  "file": "/home/otserv-global/src/fileloader.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/iobestiary.cpp.o -c /home/otserv-global/src/iobestiary.cpp",
+  "file": "/home/otserv-global/src/iobestiary.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/ioguild.cpp.o -c /home/otserv-global/src/ioguild.cpp",
+  "file": "/home/otserv-global/src/ioguild.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/iologindata.cpp.o -c /home/otserv-global/src/iologindata.cpp",
+  "file": "/home/otserv-global/src/iologindata.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/iomap.cpp.o -c /home/otserv-global/src/iomap.cpp",
+  "file": "/home/otserv-global/src/iomap.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/iomapserialize.cpp.o -c /home/otserv-global/src/iomapserialize.cpp",
+  "file": "/home/otserv-global/src/iomapserialize.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/iomarket.cpp.o -c /home/otserv-global/src/iomarket.cpp",
+  "file": "/home/otserv-global/src/iomarket.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/ioprey.cpp.o -c /home/otserv-global/src/ioprey.cpp",
+  "file": "/home/otserv-global/src/ioprey.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/bed.cpp.o -c /home/otserv-global/src/bed.cpp",
+  "file": "/home/otserv-global/src/bed.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/container.cpp.o -c /home/otserv-global/src/container.cpp",
+  "file": "/home/otserv-global/src/container.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/depotchest.cpp.o -c /home/otserv-global/src/depotchest.cpp",
+  "file": "/home/otserv-global/src/depotchest.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/depotlocker.cpp.o -c /home/otserv-global/src/depotlocker.cpp",
+  "file": "/home/otserv-global/src/depotlocker.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/inbox.cpp.o -c /home/otserv-global/src/inbox.cpp",
+  "file": "/home/otserv-global/src/inbox.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/mailbox.cpp.o -c /home/otserv-global/src/mailbox.cpp",
+  "file": "/home/otserv-global/src/mailbox.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/reward.cpp.o -c /home/otserv-global/src/reward.cpp",
+  "file": "/home/otserv-global/src/reward.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/rewardchest.cpp.o -c /home/otserv-global/src/rewardchest.cpp",
+  "file": "/home/otserv-global/src/rewardchest.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/cylinder.cpp.o -c /home/otserv-global/src/cylinder.cpp",
+  "file": "/home/otserv-global/src/cylinder.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/decay.cpp.o -c /home/otserv-global/src/decay.cpp",
+  "file": "/home/otserv-global/src/decay.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/item.cpp.o -c /home/otserv-global/src/item.cpp",
+  "file": "/home/otserv-global/src/item.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/items.cpp.o -c /home/otserv-global/src/items.cpp",
+  "file": "/home/otserv-global/src/items.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/thing.cpp.o -c /home/otserv-global/src/thing.cpp",
+  "file": "/home/otserv-global/src/thing.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/tile.cpp.o -c /home/otserv-global/src/tile.cpp",
+  "file": "/home/otserv-global/src/tile.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/trashholder.cpp.o -c /home/otserv-global/src/trashholder.cpp",
+  "file": "/home/otserv-global/src/trashholder.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/weapons.cpp.o -c /home/otserv-global/src/weapons.cpp",
+  "file": "/home/otserv-global/src/weapons.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/creaturecallback.cpp.o -c /home/otserv-global/src/creaturecallback.cpp",
+  "file": "/home/otserv-global/src/creaturecallback.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/actions.cpp.o -c /home/otserv-global/src/actions.cpp",
+  "file": "/home/otserv-global/src/actions.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/creatureevent.cpp.o -c /home/otserv-global/src/creatureevent.cpp",
+  "file": "/home/otserv-global/src/creatureevent.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/events.cpp.o -c /home/otserv-global/src/events.cpp",
+  "file": "/home/otserv-global/src/events.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/movement.cpp.o -c /home/otserv-global/src/movement.cpp",
+  "file": "/home/otserv-global/src/movement.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/raids.cpp.o -c /home/otserv-global/src/raids.cpp",
+  "file": "/home/otserv-global/src/raids.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/talkaction.cpp.o -c /home/otserv-global/src/talkaction.cpp",
+  "file": "/home/otserv-global/src/talkaction.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/baseevents.cpp.o -c /home/otserv-global/src/baseevents.cpp",
+  "file": "/home/otserv-global/src/baseevents.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/globalevent.cpp.o -c /home/otserv-global/src/globalevent.cpp",
+  "file": "/home/otserv-global/src/globalevent.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/modules.cpp.o -c /home/otserv-global/src/modules.cpp",
+  "file": "/home/otserv-global/src/modules.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/luascript.cpp.o -c /home/otserv-global/src/luascript.cpp",
+  "file": "/home/otserv-global/src/luascript.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/scripts.cpp.o -c /home/otserv-global/src/scripts.cpp",
+  "file": "/home/otserv-global/src/scripts.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/house.cpp.o -c /home/otserv-global/src/house.cpp",
+  "file": "/home/otserv-global/src/house.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/housetile.cpp.o -c /home/otserv-global/src/housetile.cpp",
+  "file": "/home/otserv-global/src/housetile.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/map.cpp.o -c /home/otserv-global/src/map.cpp",
+  "file": "/home/otserv-global/src/map.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/otpch.cpp.o -c /home/otserv-global/src/otpch.cpp",
+  "file": "/home/otserv-global/src/otpch.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/otserv.cpp.o -c /home/otserv-global/src/otserv.cpp",
+  "file": "/home/otserv-global/src/otserv.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/rsa.cpp.o -c /home/otserv-global/src/rsa.cpp",
+  "file": "/home/otserv-global/src/rsa.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/xtea.cpp.o -c /home/otserv-global/src/xtea.cpp",
+  "file": "/home/otserv-global/src/xtea.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/connection.cpp.o -c /home/otserv-global/src/connection.cpp",
+  "file": "/home/otserv-global/src/connection.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/networkmessage.cpp.o -c /home/otserv-global/src/networkmessage.cpp",
+  "file": "/home/otserv-global/src/networkmessage.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/outputmessage.cpp.o -c /home/otserv-global/src/outputmessage.cpp",
+  "file": "/home/otserv-global/src/outputmessage.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/protocol.cpp.o -c /home/otserv-global/src/protocol.cpp",
+  "file": "/home/otserv-global/src/protocol.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/protocolgame.cpp.o -c /home/otserv-global/src/protocolgame.cpp",
+  "file": "/home/otserv-global/src/protocolgame.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/protocollogin.cpp.o -c /home/otserv-global/src/protocollogin.cpp",
+  "file": "/home/otserv-global/src/protocollogin.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/protocolstatus.cpp.o -c /home/otserv-global/src/protocolstatus.cpp",
+  "file": "/home/otserv-global/src/protocolstatus.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/webhook.cpp.o -c /home/otserv-global/src/webhook.cpp",
+  "file": "/home/otserv-global/src/webhook.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/server.cpp.o -c /home/otserv-global/src/server.cpp",
+  "file": "/home/otserv-global/src/server.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/signals.cpp.o -c /home/otserv-global/src/signals.cpp",
+  "file": "/home/otserv-global/src/signals.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/stats.cpp.o -c /home/otserv-global/src/stats.cpp",
+  "file": "/home/otserv-global/src/stats.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/pathfinding.cpp.o -c /home/otserv-global/src/pathfinding.cpp",
+  "file": "/home/otserv-global/src/pathfinding.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/tools.cpp.o -c /home/otserv-global/src/tools.cpp",
+  "file": "/home/otserv-global/src/tools.cpp"
+},
+{
+  "directory": "/home/otserv-global/build/src",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSTATS_ENABLED -I/home/otserv-global/src -I/usr/include/luajit-2.1 -isystem /home/vcpkg/installed/x64-linux/include -isystem /home/vcpkg/installed/x64-linux/include/mysql  -Wall -pipe -march=native -ggdb3 -g -Ofast -fno-var-tracking-assignments -flto -fno-fat-lto-objects -fPIE   -fopenmp -std=gnu++17 -o CMakeFiles/tfs.dir/wildcardtree.cpp.o -c /home/otserv-global/src/wildcardtree.cpp",
+  "file": "/home/otserv-global/src/wildcardtree.cpp"
+}
+]

@@ -1,0 +1,11 @@
+<stages>
+<stage minlevel="1" maxlevel="8" multiplier="25" />
+<stage minlevel="9" maxlevel="100" multiplier="25" />
+<stage minlevel="101" maxlevel="150" multiplier="15" />
+<stage minlevel="151" maxlevel="200" multiplier="10" />
+<stage minlevel="201" maxlevel="300" multiplier="8" />
+<stage minlevel="301" maxlevel="400" multiplier="6" />
+<stage minlevel="401" maxlevel="500" multiplier="4" />
+<stage minlevel="501" maxlevel="600" multiplier="3" />
+<stage minlevel="601" multiplier="2" />
+</stages>

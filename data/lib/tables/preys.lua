@@ -1,0 +1,2 @@
+monsterPreysName = {}
+monsterPreysRaceId = {}
